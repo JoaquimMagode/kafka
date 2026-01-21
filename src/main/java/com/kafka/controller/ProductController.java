@@ -1,10 +1,22 @@
 package com.kafka.controller;
 
-public class ProductController {
+import java.util.List;
 
-    public String getAllProducts() {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kafka.model.Product;
+import com.kafka.service.ProductService;
+
+@RestController
+public class ProductController {
+   
+    ProductService productService;
+    
+    @RequestMapping("/products")
+    public List<Product> getAllProducts() {
         // Implementation to retrieve all products
-        return "";
+        return productService.getAllProducts();
     }
     
 }

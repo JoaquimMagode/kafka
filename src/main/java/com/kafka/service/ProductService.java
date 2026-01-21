@@ -15,5 +15,7 @@ public class ProductService {
         new Product("3", "Tablet", 299.99)
     );
 
-    
+    public List<Product> getAllProducts() {
+        return products;
+    }
 }
